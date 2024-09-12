@@ -4,26 +4,17 @@ using namespace std;
 int main()
 {
     int num = 5;
-    cout << num << endl;
-
-    // address of operator
-    // cout << addressof(num) << endl;
-    // cout << "Address of num: " << &num << endl;
-
+    num++;
     int *ptr = &num;
-    cout << *ptr << endl;
-    cout << ptr << endl;
-
-    cout << "size of interger is: " << sizeof(num) << endl;
-    cout << "size of pointer is: " << sizeof(ptr) << endl;
-
+    int a = *ptr; //5
+    a++;
     (*ptr)++;
-    cout << *ptr << endl;
-
-    ptr = ptr + 1;
-    cout << ptr << endl;
-    ptr = ptr + 1;
-    cout << ptr << endl;
-
+    cout<<a<<endl;
+    cout << "the value of num is: " << num << endl;
+    cout << "the address of num is: " << &num << endl;
+    cout << "the value of ptr is: " << *ptr << endl;
+    cout << "the address of num stored in ptr: " << ptr << endl;
+    cout << "the address of ptr is: " << &ptr << endl;
+    cout << "the size of pointer is: " << sizeof(ptr) << endl;
     return 0;
 }
