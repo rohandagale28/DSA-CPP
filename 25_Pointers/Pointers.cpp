@@ -17,4 +17,4 @@ int main()
     cout << "the address of ptr is: " << &ptr << endl;
     cout << "the size of pointer is: " << sizeof(ptr) << endl;
     return 0;
-}
+}                                                                                                                                    
