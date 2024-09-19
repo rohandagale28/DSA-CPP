@@ -1,5 +1,5 @@
-#include <iostream>
-#include <vector> // Include the vector header
+#include <iostream> // preprocessor directive
+#include <vector>   // Include the vector header
 
 using namespace std;
 
@@ -20,17 +20,17 @@ void SelectionSort(vector<int> &arr, int n)
     }
 }
 
+void printArray(vector<int> &arr, int n)
+{
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+}
+
 int main()
 {
-    vector<int> arr = {2, 6, 3, 9, 8}; // Use vector instead of an array
-    SelectionSort(arr, arr.size());    // Pass the vector and its size
-
-    // Optional: Print the sorted array to verify
-    for (int i = 0; i < arr.size(); i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-
+    vector<int> arr = {2, 6, 3, 9, 8};
+    SelectionSort(arr, arr.size());
+    printArray(arr, arr.size());
     return 0;
 }
