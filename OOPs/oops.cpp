@@ -129,6 +129,7 @@ int main()
     hero2.print();
 
     cout << Hero::timeToComplete << endl;
-    cout<<Hero::random()<<endl;
+    cout << Hero::random() << endl;
+    cout << "This code is on line " << __LINE__ << " in file " << __FILE__ << std::endl;
     return 0;
 }
