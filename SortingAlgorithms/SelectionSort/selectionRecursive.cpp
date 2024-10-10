@@ -28,7 +28,7 @@ void selectionSort(int *arr, int size, int start)
     {
         swap(arr[start], arr[minFound]);
     }
-    selectionSort(arr, 8, start + 1);
+    selectionSort(arr, size, start + 1);
 }
 
 void print(int *arr, int size)
