@@ -66,6 +66,6 @@ int main()
 
     // Print the time taken
     std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
-
+    cout<<"this is working fine so i don't need to run two device everytime"<<endl;
     return 0;
 }
