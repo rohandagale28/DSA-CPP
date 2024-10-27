@@ -27,7 +27,7 @@ public:
     LinkedList() : head(NULL)
     {
         cout << "Head is initialized to: " << head << endl;
-    };
+    };  
 
     // function to insert a new node at the beginning
     void InsertAtStart(int value)
@@ -140,6 +140,26 @@ public:
         delete nodeToDelete;
     }
 
+    void reverseLinklist()
+    {
+        Node *prev = NULL;
+        Node *curr = head;
+        Node *next = NULL;
+
+        while (curr != NULL)
+        {
+            next = curr->next;
+
+            curr->next = prev;
+
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
+  
+
     void printList()
     {
         if (!head)
@@ -165,10 +185,15 @@ int main()
     newList.InsertAtStart(2);
     newList.insertAtEnd(3);
     newList.insertAtEnd(4);
+    newList.insertAtEnd(6);
+    newList.insertAtEnd(8);
     newList.insertAtPosition(5, 3);
     newList.deleteFromStart();
     newList.deleteFromEnd();
     newList.deleteFromPosition(2);
+
+    // newList.reverseLinklist();
+    newList.reverseLinkListGroup(2);
     newList.printList();
     return 0;
 }
